@@ -16,7 +16,7 @@ void InstallInterfaces(Core::System& system) {
         return;
     }
     auto& service_manager = system.ServiceManager();
-    std::make_shared<NIM_AOC>()->InstallAsService(service_manager);
+    std::make_shared<NIM_AOC>(system)->InstallAsService(service_manager);
     std::make_shared<NIM_S>()->InstallAsService(service_manager);
     std::make_shared<NIM_U>(system)->InstallAsService(service_manager);
 }
